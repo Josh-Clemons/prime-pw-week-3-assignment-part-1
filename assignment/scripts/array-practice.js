@@ -51,7 +51,7 @@ console.log('Added an animal to end,', animalArray);
 
 // 4.a. TODO: Add a new food at the end of your array & log the array
 favoriteFoods.push ('beer');
-
+console.log ('Added a new "food" to the end,', favoriteFoods);
 
 // Example: Remove the last animal by using Array.pop
 let removedAnimal = animalArray.pop();
@@ -99,9 +99,25 @@ console.log (`My favorite foods in reverse order: ${favoriteFoods}`);
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
 
+//Created a new variable so it would retain the output for stretch goal 4.h
+let favoriteFoodsString = favoriteFoods[0] + " and " + favoriteFoods[1] + " and " + favoriteFoods[2] + " and " + favoriteFoods[3]
+console.log(favoriteFoodsString)
+// Note to self: How do I do this with a loop? 
+favoriteFoodsString = "";
+for (var i = 0; i < favoriteFoods.length; i++) {
+    if (i < favoriteFoods.length-1) {
+        favoriteFoodsString = favoriteFoodsString + favoriteFoods[i] + " and ";
+    }
+    else {
+        favoriteFoodsString = favoriteFoodsString + favoriteFoods[i];
+    }
+}
+console.log (favoriteFoodsString);
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+let combinedArray = favoriteFoods.concat(animalArray);
+console.log (combinedArray);
