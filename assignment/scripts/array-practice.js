@@ -98,20 +98,14 @@ console.log (`My favorite foods in reverse order: ${favoriteFoods}`);
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
-
+let favoriteFoodsString = "";
 //Created a new variable so it would retain the output for stretch goal 4.h
-let favoriteFoodsString = favoriteFoods[0] + " and " + favoriteFoods[1] + " and " + favoriteFoods[2] + " and " + favoriteFoods[3]
-console.log(favoriteFoodsString)
-// Note to self: How do I do this with a loop? 
-favoriteFoodsString = "";
-for (var i = 0; i < favoriteFoods.length; i++) {
-    if (i < favoriteFoods.length-1) {
-        favoriteFoodsString = favoriteFoodsString + favoriteFoods[i] + " and ";
-    }
-    else {
-        favoriteFoodsString = favoriteFoodsString + favoriteFoods[i];
-    }
+
+for (i in favoriteFoods) {
+    console.log ( 'In favoriteFoodsString loop');
+    i < favoriteFoods.length-1 ? favoriteFoodsString += favoriteFoods[i] + " and " : favoriteFoodsString += favoriteFoods[i];    
 }
+
 console.log (favoriteFoodsString);
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
@@ -120,4 +114,4 @@ console.log (favoriteFoodsString);
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
 let combinedArray = favoriteFoods.concat(animalArray);
-console.log (combinedArray);
+console.log ('Combined arrays:', combinedArray);
